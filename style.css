@@ -1,0 +1,22 @@
+body {
+    background: gray;
+}
+.container {
+    padding-left: 50px;
+    margin: 0 auto;
+    border: 1px solid;
+}
+
+header {
+    background: green;
+    border: 1px solid ;
+}
+
+.logo_area {
+    background: green;
+    color: #fff;
+}
+
+main {
+    background: white;
+}
