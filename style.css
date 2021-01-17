@@ -1,304 +1,448 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
-
 body {
-    margin: 0 auto;
-    font-weight: 400;
-    line-height: 2;
-	letter-spacing: 0.2em;
-	font-family: 游ゴシック, "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+	min-width: 1140px;
+	margin: 0 auto;
+	background: #FAF9F9;
+	font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
 }
 
 a {
-    color: #464036;
-	text-decoration: none;
-	/* アニメーション切替えをふわッと */
-	-webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all  0.4s ease;
+    text-decoration: none;
+    color: #000;
 }
 
-a:hover {
-	color: #B59965;
-    /* opacity: 60%; */
-}
-
-h3 {
-	text-align: center;
-}
-
-/* ====== START header START ======== */
-.header {
-    border-bottom: 2px solid #f0f0f0;
-}
-
-.header .container{
-    height: 80px;
-    max-width: 1400px;
-    display: flex;
-    padding: 0 4%;
-    /* justify-content: space-between; */
-    align-items: center;
-    text-align: center;
-}
-
-.logo_area img {
-    width: 50%;
-    vertical-align: middle;
-}
-
-.nav_area {
-    margin-left: auto;
-    display: flex;
-}
-
-.header ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-.header li + li {
-    margin-left: 2rem;
-}
-
-
-.contact_btn {
-    margin-left: 1.2em;
-}
-
-/* コンタクトボタンの色・サイズなど */
-.contact_btn a {
-    background:  #9c0808;
-    color: white;
-    border-radius: 1px;
-    font-weight: 500;
-    padding: 1.2rem 3rem;
-    margin-left: 2.2rem;
-    box-sizing: border-box;
-    box-shadow: 0 5px 12px 0 rgba(77, 36, 36, 0.4);
-}
-
-.contact_btn a:hover {
-	background: #000;
-}
-
-}
-
-/* yetyetyet */
-.contact_btn span {
-    position:relative; /* before要素のiconの絶対配置に対するrelative */
-}
-/* お問い合わせボタンの左にemeil_iconを表示 */
-.contact_btn span::before {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    width: 1.4em;
-    height: 1.4em;
-    background: url(img/icon/icon_email@2x.svg) no-repeat center;
-    background-size: contain;
-    margin-right: 3em;
-	line-height: 2em;
-	/* 位置指定 */
-	top: 30px;
-	right: 260px;
-
-}
-
-/* ====== END header END ======== */
-
-
-
-.main {
-
-}
-
-/* ヒーローセクション */
-.hero {
-	height: 480px;
-    margin: 33px auto 10px;
-}
-
-	/* ヒーロー キャッチコピー */
-.hero_txt_box {
-	width: 430px;
-	height: 400px;
-    position: absolute;
-    padding: 50px 0 60px 60px;
-    left: 15%;
-	top: 30%;
-	/* ボックス全体をグラデーションにするのすごい */
-	background: linear-gradient(to bottom, #856f0e 40%, rgba(255,255,255,0) 100%);
-	/* background: #61850e;  */
-	/* #61850e ちょい渋い暖かい緑 */
-	/* #856f0e 柔らかいけど信頼感のある茶色 */
-	/* #0e1085 信頼感ある青 */
-	color: white;
+ul {
+    list-style: none;/* リストの点を消す */
+    display: flex;/* リストを上下中央寄せ */
+    align-items: center;/* リストを上下中央寄せ */
     
+  }
+
+
+main {
+	background: url(img/img/bg_img_2x.png) no-repeat top right;
 }
 
-h1 {
-	font-size: 2rem;
-	line-height: 1.3em;
+/* ついてくるタイプのヘッダーを実装 */
+.header {
+	background: inherit;
+    min-width: 768px;/* これで小さい画面幅に設定した時でも、レイアウトが崩れない */
+    padding: 0 0 0 5vw;/* 左に隙間をいれる */
+    margin: 0 auto;
+    position: fixed;/* ついてくるタイプのヘッダーを実装 */
+    top: 0;/* ついてくるタイプのヘッダーを実装 */
+    left: 0;/* ついてくるタイプのヘッダーを実装 */
+    z-index: 200;/* ついてくるタイプのヘッダーを実装 */
+    width: 100%;
+    height: 70px;
+    transition: all .5s;
+	display: flex;/* ついてくるタイプのヘッダーを実装 */
+	border-bottom: 2px solid #f0f0f0;
 }
 
-
-	/* ヒーローイメージ */
-.hero_img_box {
-	
-
+/* ロゴ */
+.logo_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero_img_box img {
-	width: 45%;
+.logo {
+	font-size: 1.15rem;
+}
+
+.logo_text_area {
+	margin-left: 1vw;/* ロゴとテキストの間をあける */
+	display: flex;
+}
+
+	/* 全国対応 */
+	.logo_sub_text	{
+		margin-left: 10px;
+		float: left;
+		color: #000;
+		font-size: 100%;
+		border: 1px solid;
+		padding: 0 9px;
+	}
+
+	/* ロゴの横テキスト | 戦略的Webデザイン事務所 */
+	.logo_main_text {
+		margin-left: 8px;
+		float: left;
+		color: #000;
+		font-size: 0.8rem;
+		line-height: 1.2;
+		font-weight: 100;
+		display: flex;/* 上下中央寄せ */
+		align-items: center;/* 上下中央寄せ */
+	}
+
+		/* ナビエリア*/
+		.nav_area {
+			display: flex;
+			margin-left: auto
+		}
+
+		li {
+			padding: 0 1rem;
+			letter-spacing: 3px;
+			line-height: 1.4;
+		}
+
+		.contact_btn {
+			line-height: 40px;/* 行の高さを指定。そのままだと真ん中になってるので、アイコンの間をあけてあげる感じ */
+			font-weight: 500;
+			padding: 34px 1em 0;
+			background: #557683 url(img/icon/icon_mail_white.svg) 50% 32%/29px 29px no-repeat;
+			color: #fff;
+		}
+
+		.contact_btn a {
+			color: white;/* 色変更｜コンタクトの文字を白に */
+		}
+
+/* END-END-END ヘッダーエリア END-END-END */
+main {
+    height: 8000px;
+}
+
+	/* ヒーローエリア */
+	.hero_area {
+		margin-top: 120px;
+		height: calc(90vh - 157px);
+		position: relative;
+		display: flex;
+		margin-bottom: 30px;
+	}
+
+	.hero_img {
+		top: 2vh;
+		width: 30vw;
+	}
+
+	.hero_img img {
+		width: 88%;
+		min-width: 30vh;
+	}
+
+	.hero_copy {
+		writing-mode: vertical-rl;
+		text-orientation: upright; /* webの文字も縦になっちゃうのを修正 */
+		letter-spacing: 10px;
+		line-height: 2.8;
+		font-size: 22px;
+		font-weight: 800;
+		margin-left: 20%;
+	}
+		
+
+	/* ガシッ */
+	.hero_copy span {
+		font-size: 1.5rem;
+		display:inline-block;
+		transform: rotate(10deg);
+		-moz-transform: rotate(10deg);
+		-webkit-transform: rotate(10deg);
+	}
+
+	/* コピー重要部分 */
+	.hero_copy strong {
+		color: #F55537;
+	}
+
+	.hero_phrase {
+		writing-mode: vertical-rl;
+		letter-spacing: 6px;
+		font-size: 30px;
+		position: relative;
+		right: 40px;
+		text-shadow: 3px 4px 1px #F5CD00;
+		color: #000;
+	}
+
+
+
+
+/* 特徴セクション */
+.feature_wrap {
+	min-width: inherit;
+	width: 90vw;
+	margin: 0 auto;
+}
+
+.feature_box {
+	border: 3px solid #000;
+    border-radius: 20px;
+    padding-top: 4rem;
+    position: relative;
+    margin-bottom: 5rem;
+	background: #faf9f9;
+	position: relative;
+}
+
+.feature_ttl {
+	font-size: 1.6vw;
 	position: absolute;
-	right: 10%;
-}
-
-/* END ヒーローセクション END */
-
-
-/* div_2 セクション */
-.user_feeling {
-	height: 500px;
-    margin: 70px auto 15px;
-}
-
-h3 span {
-	color: rgb(180, 21, 21);
-}
-
-/* END div_2 セクション END */
-
-
-.detail_btn {
+	top: -50px;
+	background-color: #FAF9F9;
+	font-weight: 500;
+	margin: auto 20%;
 	text-align: center;
+	padding: 1% 4.5%;
+	line-height: 1.8em;
+	border-radius: 70%;
 }
+	/* だけじゃないの上に点をつける https://bityl.co/5DwZ */
+	.feature_ttl span {
+		-webkit-text-emphasis: dot #000;
+		text-emphasis: dot #000;
+	}	
 
-.detail_btn a {
-	border: 1px solid black;
-	padding: 15px 100px;
-	background-color: transparent;
-    font-size: 14px;
-	letter-spacing: 0.12rem
-}
+	/* だけじゃないの上に点をつける bityl.co/5AJI */
+	/* .feature_ttl strong {
+		font-weight: 500;
+		padding-top: .4em;
+		background-position: top left -3px;
+		background-repeat: repeat-x;
+		background-size: 1.2em .3em;
+		background-image: -webkit-radial-gradient(.1em .1em at center center,black, black 100%,transparent);
+		background-image: radial-gradient(.1em .1em at center center,black, black 100%,transparent);
+	} */
 
-.detail_btn a:hover {
-	cursor: pointer;
-	color: white;
-	background-color: black;
-	opacity: 100%;
-}
+	/*  feature_area 丸エリア */
+	.circle_wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1vh;
+		width: 100%;
+	}
+
+	/* 丸 */
+	.circle {
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.circle span {
+		text-align: center;
+		letter-spacing: 2.5px;
+		line-height: 2vw;
+	}
+
+		/* 小さいサイズの丸 */
+		.circle_s {
+			border: solid 3px #557683;
+			width: 13vw;
+			height: 13vw;
+		}
+
+		.circle_s span {
+			color: #557683;
+			font-size: 0.9em;
+			font-weight: bold;
+		}
+
+		/* 大きいサイズの丸 */
+		.circle_l {
+			/* border: solid 7px #F55937; */
+			background-color: #F55937;
+			width: 15vw;
+			height: 15vw;
+		}
+
+		.circle_l span {
+			color: white;
+			font-size: 1.08vw;
+			font-weight: 500;
+		}
+
+	.mark {
+		padding: 0 2vw;
+		font-size: 3vw;
+	}
+
+	/* div2 ポイント吹き出しエリア */
+
+	.message_wrapper {
+		margin: 10px;
+		padding: 10px;
+	}
+
+	.people_pic {
+		background: url(img/img/div2_3x.png) no-repeat center / cover;
+		height: 10vw;
+		width: 10vw;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 20vw;
+	}
+
+	.bubble {
+		position: relative;
+		display: inline-block;
+		margin: 1.5em 0 1.5em 27em;/* 吹き出しの位置はここで調節 */
+		padding: 7px 2vw;
+		min-width: 120px;
+		max-width: 100%;
+		color: #555;
+		font-size: 16px;
+		background: #FAF9F9;
+		border: solid 1px #555;
+		box-sizing: border-box;
+		border-radius: 10px;
+	  }
+
+	  
+	  /*  afterの三角の上に、三角を重ねる */
+	  .bubble:before {
+		content: "";
+		position: absolute;
+		top: 35%;/* .bubbleで作った四角の縦軸、上から35%の位置に三角を配置。値が大きくなればその分下にいく */
+		left: -37px;
+		/* margin-top: 12px; */
+		border: 10px solid transparent;/* ここtransparentから#000とかに色づけすると、なんで三角作れるのかわかるよ */
+		border-right: 30px solid #FAF9F9;
+		z-index: 2;
+	  }
+	  
+	  /* afterで枠になる、ベースの三角を作る */
+	  .bubble:after {
+		content: "";
+		position: absolute;
+		top: 35%;
+		left: -40px;/* left0だと、三角形の地になってる四角の一番左が、文字枠の四角につく感じに。-でそれよりも左に行ってくれるよ */
+		/* left: -20px; */
+		/* margin-top: 0; -だから上に上がる */
+		border: 10px solid transparent;/* これは三角形の横幅を伸ばす。値が小さいほど鋭くなる */
+		border-right: 30px solid #000;/* これは三角形の横軸を伸ばす。 */
+		z-index: 1;
+	  }
+	  
+	  .section_ttl {
+		font-size: 1.5rem;
+		text-align: center;
+		font-weight: 700;
+	  }
 
 
-/* Q&Aセクション https://copypet.jp/963/ */
-.cp_qa *, .cp_qa *:after, .cp_qa *:before {
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
-}
-.cp_qa .cp_actab {
-	position: relative;
-	overflow: hidden;
-	width: 70%;
-	margin: 0 0 1.2em 8em; 
-	color: #1b2538;
-}
-.cp_qa .cp_actab input {
-	position: absolute;
-	opacity: 0;
-}
-/* 質問 */
-.cp_qa .cp_actab label {
-	font-weight: bold;
-	line-height: 1.6em;
-	position: relative;
-	display: block;
-	margin: 0 0 0 0;
-	padding: 1em 2em 1em 2.5em;
-	cursor: pointer;
-	text-indent: 1em;
-	border-bottom: 1px solid black;
-	/* border-radius: 0.3em;
-	background: #e9e0d1; */
-}
-.cp_qa .cp_actab label::before {
-	font-size: 1.5em;
-	padding-right: 1em;
-	content: 'Q';
-}
-.cp_qa .cp_actab label:hover {
-	transition: all 0.3s;
-	color: #B59965;
-}
-/* --質問の＋アイコン */
-.cp_qa .cp_actab label::after {
-	font-size: 1.7em;
-	font-weight: bold;
-	line-height: 2em;
-	position: absolute;
-	top: 0;
-	right: 0;
-	content: '+';
-	display: inline-block;
-	width: 2em;
-	height: 2em;
-	-webkit-transition: transform 0.4s;
-	        transition: transform 0.4s;
-}
-/* 答え */
-.cp_qa .cp_actab .cp_actab-content {
-	position: relative;
-	overflow: hidden;
-	max-height: 0;
-	padding: 0 0 0 2.5em;
-	-webkit-transition: max-height 0.2s;
-	        transition: max-height 0.2s;
-	border-radius: 0 0 0.5em 0.5em;
-}
-.cp_qa .cp_actab .cp_actab-content::before {
-	font-size: 1.5em;
-	position: absolute;
-	margin: 0.4em 0 0 -1em;
-	padding: 0;
-	content: 'A';
-}
-.cp_qa .cp_actab .cp_actab-content p {
-	margin: 1em 1em 1em 0;
-}
+/* ======== START Q&Aセクション START ======== */
+    /* 全体の実装はここ */
+    
+    .cp_actab {
+        position: relative;
+        overflow: hidden;
+        width: 60%;
+        color: black;
+        /* (QもAも含む)テキスト全ての色。黒の場合は指定しなくてもok */
+        /* text-align: center;Q&Aのテキストを左右中央に配置 */
+        margin: 0 auto;
+        /* Q&Aのコンテンツをサイト内の左右中央に配置 */
+    }
+    /* チェックボックスを消去する */
+    
+    .cp_actab input {
+        position: absolute;
+        /* チェックボックスを非表示にした分変な空間が生まれるのを削除 */
+        opacity: 0;
+        /* チェックボックスを非表示 */
+    }
+    /* 質問の実装 */
+    
+    .cp_actab label {
+        font-weight: bold;
+        line-height: 1.6em;
+        display: block;
+        margin: 0;
+        padding: 1em 2em 1em 2.5em;
+        cursor: pointer;
+        /* 質問テキストの上にカーソルを当てると手になる */
+        text-indent: 1em;
+        /* テキストの先頭に数値分の隙間を入れる */
+        border-bottom: 1px solid black;
+        /* テキストの下の下線 */
+        /* background: ; */
+    }
+    /* Qを表示させる。 */
+    
+    .cp_actab label::before {
+        content: 'Q　';
+        font-size: 1.5em;
+    }
+    /* 質問のhover処理実装 */
+    
+    .cp_actab label:hover {
+        transition: all 0.3s;
+        opacity: 70%;
+    }
+    /* 質問右の+ */
+    
+    .cp_actab label::after {
+        content: '+';
+        font-size: 1.7em;
+        font-weight: bold;
+        line-height: 2em;
+        position: absolute;
+        top: 0;
+        /* これがないと下線にくっつく形になっちゃう。縦中央寄せ */
+        right: 0;
+        /* 右寄せ */
+        width: 2em;
+        /* 右寄せから少し左に。 */
+    }
+    /* 答えの実装 */
+    
+    .cp_actab-content {
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        /* クリックされてない時は、答えが見えないように0 */
+        padding: 0 0 0 2.5em;
+        text-indent: 4em;
+        /* テキストの先頭に数値分の隙間を入れる。質問と違ってAと一緒に綺麗にずれないので↓ */
+    }
+    /* Aの表示を実装 */
+    
+    .cp_actab-content::before {
+        content: 'A　';
+        position: absolute;
+        margin: 0.4em 0 0 -4.65em;
+        /* ↑でAが答えテキストに重なってしまった分を、-で左に戻す */
+        padding: 0;
+        font-size: 1.5em;
+    }
+    /* 答えのテキストの幅調整 */
+    
+    .cp_actab-content p {
+        margin: 1em 1em 1em 0;
+    }
+    /* 質問がクリックされた時の実装 */
+    /* クリックされたら答えが見える仕様を実装 */
+    
+    .cp_actab input:checked~.cp_actab-content {
+        max-height: 40em;
+    }
+    /* クリックされたら、テキストの色が変わる */
+    
+    .cp_actab input:checked~label {
+        color: #B59965;
+    }
+    /* クリックされたら+が90°回る */
+    
+    .cp_actab input[type=checkbox]:checked+label::after {
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
 
-/* 質問を開いた時の仕様 */
-/* --答えの高さ */
-.cp_qa .cp_actab input:checked ~ .cp_actab-content {
-	max-height: 40em;
-	border: 10px solid #e9e0d1;
-}
-/* 質問をクリックした時のアイコンの動き */
-.cp_qa .cp_actab input:checked ~ label {
-	color: #B59965;
-	border-radius: 0.5em 0.5em 0 0;
-}
-/* 質問をクリックした時の+の動き */
-.cp_qa .cp_actab input[type=checkbox]:checked + label::after {
-	-webkit-transform: rotateZ(45deg);
-	transform: rotateZ(45deg);
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-}
-
-/* Q&Aセクション終わり */
+/* ======== END Q&Aセクション END ======== */
 
 /* ====== END main END ======== */
 
-
-.footer {
-    height: ;
-    color: white;
-    background: #464036;
-    padding-top: 4em;
-    padding-bottom: 4em;
-}
