@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>0111おもいやりデザイン本舗</title>
 </head>
 
@@ -14,20 +16,21 @@
             <p class="logo"><a href="index.html">おもいやりデザイン本舗</a></p>
             <div class="logo_text_area">
                 <p class="logo_sub_text">全国対応</p>
-                <h1 class="logo_main_text">顧客の心を掴む！<br>戦略的ホームページ制作事務所</h1>
+                <h1 class="logo_main_text">顧客の心を掴む！<br>戦略的Webデザイン事務所</h1>
             </div>
         </div>
         <nav class="nav_area">
             <ul>
-                <li><a href="#">ナビリスト</a></li>
-                <li><a href="#">ナビ</a></li>
-                <li><a href="#">ナビリスト</a></li>
-                <li><a href="#">ナビ</a></li>
+                <li><a href="#1">特徴</a></li>
+                <li><a href="#2">事業内容</a></li>
+                <li><a href="#3">役立つブログ</a></li>
             </ul>
             <div class="contact_btn">
                 <a href=”#”>無料相談はこちら</a>
             </div>
         </nav>
+        <button type="button" id="navbtn"></button>
+
     </header>
 
     <main>
@@ -42,14 +45,14 @@
         </section>
 
         <!-- 2 -->
-        <section class="feature_area">
+        <section class="feature_area" id="1"> 
             <div class="feature_wrap">
                 <div class="feature_box">
                     <h4 class="feature_ttl">あなたの顧客の気持ちまで考え抜いて<br>「お洒落な<span>だけじゃない</span>」サイトをお作りします。</h4>
 
                     <!-- 丸 -->
                     <div class="circle_wrap">
-                        <div class="circle circle_s"><span>顧客視点の<br>コンテンツ・設計</span></div>
+                        <div class="circle circle_s"><span>顧客視点で作る<br>コンテンツ•設計</span></div>
                         <div class="mark">×</div>
                         <div class="circle circle_s"><span>事業の魅力を<br>伝える力<br> </span></div>
                         <div class="mark">×</div>
@@ -74,51 +77,117 @@
         </section>
 
         <!-- START 3 START -->
-        <section class="message_area">
-            <div class="section_ttl"><h3>Webサイトは戦略が8割</h3></div>
+        <section class="message_area"  id="2">
+            <div class="section_ttl">
+                <h3>Webサイトは戦略が8割</h3>
+            </div>
+            <p>Webサイトはデジタル上でお客様と接することができる<br>
+                いわば「デジタル接客窓口」です。<br>
+                “お洒落なだけ” 、 “事業の魅力を一方的に伝えるだけ”では<br>
+                意味がありません。<br>
+                <br>
+                <strong>「見込み顧客に選ばれて売上が上がる」</strong><br>
+                <br>
+                そんな
+                <span>本当の意味で「あって意味のあるWebサイト」を</span><br>
+                <span>戦略的に実現するWebデザイン事務所が私たちです。</span><br>
+                <br>
+                インターネットについてはわからない事が沢山ある思います。<br>
+                専門用語などは使わずに、Web専門家としてわかり易くご説明致します。<br>                なんでもお気軽にご相談ください。
+            </p>
+            <div class="contact_btn_02">
+                <div class="btn-copy">\　たった30秒でお問い合わせ完了！　/</div>
+                <a href="#" class="btn btn-border-shadow btn-border-shadow--color"><i class="fa far fa-envelope"></i>無料で相談する</a>
+            </div>
         </section>
 
         <section class="flow_area">
-            <div class="section_ttl"><h3>お問い合わせ後の流れ</h3></div>
-            
+            <div class="section_ttl">
+                <h3>お問い合わせ後の流れ</h3>
+            </div>
+            <div class="flow_contents_wrap">
+                <ul>
+                    <li class="flow_items">
+                        <figure><img src="img/icon/icon_email.svg" alt=""></figure>
+                        <span class="flow_items_ttl">担当者よりご連絡</span>
+                        <span class="flow_items_description">1〜2営業日以内に<br>ご連絡致します。</span>
+                    </li>
+                    <li class="flow_items">
+                        <figure><img src="img/icon/icon_ear.svg" alt=""></figure>
+                        <span class="flow_items_ttl">ヒアリング・ご提案</span>
+                        <span class="flow_items_description">制作の目的や思い等を<br>お伺いの上、最適なご提案をさせて頂きます</span>
+                    </li>
+                    <li class="flow_items">
+                        <figure><img src="img/icon/icon_handshaking.svg" alt=""></figure>
+                        <span class="flow_items_ttl">ご契約</span>
+                        <span class="flow_items_description">お客様にご納得頂いた後、
+                            正式に書類にてご契約。</span>
+                    </li>
+                    <li class="flow_items">
+                        <figure><img src="img/icon/icon_pc.svg" alt=""></figure>
+                        <span class="flow_items_ttl">制作開始</span>
+                        <span class="flow_items_description">修正や打ち合わせ等を<br>適宜行いながら制作。</span>
+                    </li>
+                    <li class="flow_items">
+                        <figure><img src="img/icon/icon_sply.svg" alt=""></figure>
+                        <span class="flow_items_ttl">お引き渡し</span>
+                        <span class="flow_items_description">バグなどがないか確認後、<br>完成したWebサイトが<br>納品となります。</span>   
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section class="faq_area">
-            <div class="section_ttl"><h3>よくある質問</h3></div>
-                <!-- 以下質問ドロップダウンの実装 -->
-                <div class="cp_qa">
-                    <div class="cp_actab">
-                        <input id="cp_tabfour031" type="checkbox" name="tabs">
-                        <label for="cp_tabfour031">
-                            納品までにかかる期間はどのくらいですか？
-                        </label>
-                        <div class="cp_actab-content">
-                            <p>答えテキスト</p>
-                        </div>
-                    </div>
-                    <div class="cp_actab">
-                        <input id="cp_tabfour032" type="checkbox" name="tabs">
-                        <label for="cp_tabfour032">料金の目安を教えてください</label>
-                        <div class="cp_actab-content">
-                            <p>答えテキスト</p>
-                        </div>
-                    </div>
-                    <div class="cp_actab">
-                        <input id="cp_tabfour033" type="checkbox" name="tabs">
-                        <label for="cp_tabfour033">ネット関連は苦手なのですが、全てお任せしてしまって大丈夫でしょうか？</label>
-                        <div class="cp_actab-content">
-                            <p>答えテキスト</p>
-                        </div>
+            <div class="section_ttl">
+                <h3>よくある質問</h3>
+            </div>
+            <!-- 以下質問ドロップダウンの実装 -->
+            <div class="cp_qa">
+                <div class="cp_actab">
+                    <input id="cp_tabfour031" type="checkbox" name="tabs">
+                    <label for="cp_tabfour031">
+                        納品までにかかる期間はどのくらいですか？
+                    </label>
+                    <div class="cp_actab-content">
+                        <p>答えテキスト</p>
                     </div>
                 </div>
-                <!-- 質問ドロップダウンの実装終わり -->
+                <div class="cp_actab">
+                    <input id="cp_tabfour032" type="checkbox" name="tabs">
+                    <label for="cp_tabfour032">料金の目安を教えてください</label>
+                    <div class="cp_actab-content">
+                        <p>答えテキスト</p>
+                    </div>
+                </div>
+                <div class="cp_actab">
+                    <input id="cp_tabfour033" type="checkbox" name="tabs">
+                    <label for="cp_tabfour033">ネット関連は苦手なのですが、全てお任せしてしまって大丈夫でしょうか？</label>
+                    <div class="cp_actab-content">
+                        <p>答えテキスト</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 質問ドロップダウンの実装終わり -->
         </section>
 
         <section class="contact_closing_area">
-            <div class="section_ttl"><h3>問い合わせ</h3></div>
-            
+            <div class="section_ttl">
+                <h3>問い合わせ</h3>
+            </div>
+
         </section>
+
+        <footer>
+            <div class="footer_area">
+                <div class="footer_copyright">
+                © 2021 東京都町田市拠点のWEB制作・ホームページ制作・各種デザイン おもいやりデザイン本舗 All Rights Reserved.
+            </div>
+            </div>
+        </footer>
     </main>
+
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>
