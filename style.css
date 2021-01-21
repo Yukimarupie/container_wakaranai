@@ -8,14 +8,17 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  overflow-x: hidden;
+
 }
 
 
 body {
-	min-width: 1140px;
 	margin: 0 auto;
 	background: #FAF9F9;
 	font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+	overflow-x: hidden;
+
 }
 
 a {
@@ -35,7 +38,6 @@ main {
 	background: url(img/img/bg_img_2x.png) no-repeat top right;
 }
 
-
 /* ついてくるタイプのヘッダーを実装 */
 .header {
 	background: inherit;
@@ -47,7 +49,6 @@ main {
     left: 0;/* ついてくるタイプのヘッダーを実装 */
     z-index: 200;/* ついてくるタイプのヘッダーを実装 */
     width: 100%;
-    height: 70px;
     transition: all .5s;
 	display: flex;/* ついてくるタイプのヘッダーを実装 */
 	border-bottom: 2px solid #f0f0f0;
@@ -103,7 +104,30 @@ main {
 			line-height: 1.4;
 		}
 
-		.contact_btn {
+
+
+
+/* ==== END 共通ヘッダーエリア END ==== */
+
+/* ==== START 共通ヒーローエリア START ==== */
+.hero_area {
+	display: flex;
+	position: relative;
+}
+
+
+@media (min-width: 1025px) {
+
+	.header {
+		height: 70px;
+	}
+
+  		/* PCではボタン非表示 */
+		  #navbtn{
+			display:none;
+		  }
+
+		  .contact_btn {
 			line-height: 40px;/* 行の高さを指定。そのままだと真ん中になってるので、アイコンの間をあけてあげる感じ */
 			font-weight: 500;
 			padding: 34px 1em 0;
@@ -114,20 +138,11 @@ main {
 		.contact_btn a {
 			color: white;/* 色変更｜コンタクトの文字を白に */
 		}
-  		/* PCではボタン非表示 */
-		#navbtn{
-			display:none;
-		  }
-
-
-/* END-END-END ヘッダーエリア END-END-END */
-
 	/* ヒーローエリア */
 	.hero_area {
 		margin-top: 120px;
 		height: calc(90vh - 157px);
-		position: relative;
-		display: flex;
+		
 		margin-bottom: 30px;
 	}
 
@@ -595,6 +610,93 @@ a.btn i.fa {
 	color: #fff;
 	text-align: center;
 }
+}
 
+		/* ヘッダーエリア iPad */
+		@media (max-width: 1024px){
+			.header {
+				height: 55px;
+			}
 
+			/* ===== START  ハンバーガーボタン用コード START ===== */
+			/* https://0forest.com/hamburger-menu/  */
+			.nav_area{
+			  position: fixed;
+			  top: 0;
+			  left: 100%;
+			  width: 60%;
+			  height: 100vh;
+			  background: rgba(0,0,0,0.9);
+			  color: #ffffff;
+			  /* display: flex; */
+			  justify-content: center;
+			  align-items: center;
+			  /* 右からスライド */
+			  transition: left 0.5s;
+			}
+			.nav_area ul{
+			  list-style:none;
+			}
+			.nav_area li:not(:last-child){
+			  margin-bottom: 30px;
+			}
+			.nav_area a{
+			  color: #ffffff;
+			}
+		  }
+		  /* ナビゲーションボタン（開く） */
+		  #navbtn{
+			position: fixed;
+			top: 15px;
+			right: 15px;
+			padding: 0;
+			outline: none;
+			border: none;
+			background: none;
+			width: 30px;
+			height: 20px;
+			cursor: pointer;
+		  }
+		  
+		  #navbtn::before,
+		  #navbtn::after{
+			content : '';
+			display: block;
+			height: 1px;
+			background-color: #333333;
+			transform: translateY(10px);
+			transition: 0.3s ease-in-out;
+		  }
+		  
+		  #navbtn::before{
+			transform: translateY(-10px);
+			box-shadow: 0 10px #333333;
+		  }
+		  
+		  /* ナビゲーションボタン（閉じる） */
+		  .open #navbtn{
+			z-index: 100;
+		  }
+		  .open #navbtn::before{
+			background: rgb(140, 140, 140);
+			transform: rotate(-45deg);
+			box-shadow: none;
+		  }
+		  .open #navbtn::after{
+			background: rgb(140, 140, 140);
+
+			
+			transform: rotate(45deg);
+			box-shadow: none;
+		  }
+		  /* ナビゲーションメニュー 開いた時*/
+		  .open .nav_area{
+			right: 0;
+		  }
+
+		  /* お問い合わせボタンの表示をなくす
+		  .contact_btn {
+			display:none;
+		  } */
+		  /* ===== END ハンバーガーボタン用コード END ===== */
 
