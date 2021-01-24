@@ -1,60 +1,70 @@
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow-x: hidden;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow-x: hidden;
 }
-
 
 body {
 	margin: 0 auto;
 	background: #FAF9F9;
-	font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+	font-family: "Montserrat", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 	overflow-x: hidden;
 }
 
 a {
-    text-decoration: none;
-    color: #000;
+	text-decoration: none;
+	color: #000;
 }
 
 ul {
-    list-style: none;/* リストの点を消す */
-	align-items: center;/* リストを上下中央寄せ */
-	padding: 0;/* ブラウザの左paddingを消去 */
-  }
+	list-style: none;
+	/* リストの点を消す */
+	align-items: center;
+	/* リストを上下中央寄せ */
+	padding: 0;
+	/* ブラウザの左paddingを消去 */
+}
 
 main {
 	background: url(img/img/bg_img_2x.png) no-repeat top right;
+	background-size: 16.5%;
 }
 
 /* ついてくるタイプのヘッダーを実装 */
+
 .header {
 	background: inherit;
-    min-width: 768px;/* これで小さい画面幅に設定した時でも、レイアウトが崩れない */
-    padding: 0 0 0 5vw;/* 左に隙間をいれる */
-    margin: 0 auto;
-    position: fixed;/* ついてくるタイプのヘッダーを実装 */
-    top: 0;/* ついてくるタイプのヘッダーを実装 */
-    left: 0;/* ついてくるタイプのヘッダーを実装 */
-    z-index: 200;/* ついてくるタイプのヘッダーを実装 */
-    width: 100%;
-    transition: all .5s;
-	display: flex;/* ついてくるタイプのヘッダーを実装 */
+	min-width: 768px;
+	/* これで小さい画面幅に設定した時でも、レイアウトが崩れない */
+	padding: 0 0 0 5vw;
+	/* 左に隙間をいれる */
+	margin: 0 auto;
+	position: fixed;
+	/* ついてくるタイプのヘッダーを実装 */
+	top: 0;
+	/* ついてくるタイプのヘッダーを実装 */
+	left: 0;
+	/* ついてくるタイプのヘッダーを実装 */
+	z-index: 200;
+	/* ついてくるタイプのヘッダーを実装 */
+	width: 100%;
+	transition: all .5s;
+	display: flex;
+	/* ついてくるタイプのヘッダーを実装 */
 	border-bottom: 2px solid #f0f0f0;
 }
 
 /* ロゴ */
+
 .logo_area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .logo {
@@ -62,97 +72,165 @@ main {
 }
 
 .logo_text_area {
-	margin-left: 1vw;/* ロゴとテキストの間をあける */
+	margin-left: 1vw;
+	/* ロゴとテキストの間をあける */
 	display: flex;
 }
 
-	/* 全国対応 */
-	.logo_sub_text	{
-		margin-left: 10px;
-		float: left;
-		color: #000;
-		font-size: 100%;
-		border: 1px solid;
-		padding: 0 9px;
-	}
+/* 全国対応 */
 
-	/* ロゴの横テキスト | 戦略的Webデザイン事務所 */
-	.logo_main_text {
-		margin-left: 8px;
-		float: left;
-		color: #000;
-		font-size: 0.8rem;
-		line-height: 1.2;
-		font-weight: 100;
-		display: flex;/* 上下中央寄せ */
-		align-items: center;/* 上下中央寄せ */
-	}
+.logo_sub_text {
+	margin-left: 10px;
+	float: left;
+	color: #000;
+	font-size: 100%;
+	border: 1px solid;
+	padding: 0 9px;
+}
 
-		/* ナビエリア*/
-		.nav_area {
-			display: flex;
-			margin-left: auto
-		}
+/* ロゴの横テキスト | 戦略的Webデザイン事務所 */
 
-		.nav_area li {
-			padding: 0 1rem;
-			letter-spacing: 3px;
-			line-height: 1.4;
-		}
+.logo_main_text {
+	margin-left: 8px;
+	float: left;
+	color: #000;
+	font-size: 0.8rem;
+	line-height: 1.2;
+	font-weight: 100;
+	display: flex;
+	/* 上下中央寄せ */
+	align-items: center;
+	/* 上下中央寄せ */
+}
 
+/* ナビエリア*/
 
+.nav_area {
+	display: flex;
+	margin-left: auto
+}
+
+.nav_area li {
+	padding: 0 1rem;
+	letter-spacing: 3px;
+	line-height: 1.4;
+}
 
 /* ==== END 共通ヘッダーエリア END ==== */
 
 /* ==== START 共通ヒーローエリア START ==== */
+
+.hero_area {
+	padding-left: 5em;
+	padding-right: 5em;
+}
+
+.hero_img {
+	max-width: 700px;
+	width: 45%;
+	position: relative;
+	top: -20px;
+	margin: 0 auto;
+}
+
 .hero_wrap {
 	display: flex;
-	position: relative;
 }
 
 .hero_copy {
+	padding-left: 5%;
 	writing-mode: vertical-rl;
-	text-orientation: upright; /* webの文字も縦になっちゃうのを修正 */
+	text-orientation: upright;
+	/* webの文字も縦になっちゃうのを修正 */
+}
 
+/* コピー重要部分 */
+
+.hero_copy strong {
+	color: #F55537;
+}
+
+/* ガシッ */
+
+.hero_copy span {
+	font-size: 1.5rem;
+	display: inline-block;
+	transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
 }
 
 .hero_phrase {
 	writing-mode: vertical-rl;
 	text-shadow: 3px 4px 1px #F5CD00;
 	color: #000;
+	padding-right: 5%;
 }
 
+/* 共通セクション全体への実装 */
 
-	/* コピー重要部分 */
-	.hero_copy strong {
-		color: #F55537;
-	}
+section {
+	margin: 0 auto;
+}
 
-	/* ガシッ */
-	.hero_copy span {
-		font-size: 1.5rem;
-		display:inline-block;
-		transform: rotate(10deg);
-		-moz-transform: rotate(10deg);
-		-webkit-transform: rotate(10deg);
-	}
+.section_ttl {
+	text-align: center;
+	font-weight: 700;
+	margin: 5em 0 3em 0;
+}
 
-	/* 共通セクション全体への実装 */
-	section {
-		margin: 0 auto;
-	}
+/* 共通feature */
 
-	.section_ttl {
-		text-align: center;
-		font-weight: 700;
-		margin: 5em 0 3em 0;
-	  }
+.feature_wrap {
+	min-width: inherit;
+	width: 90vw;
+	margin: 5rem auto 0;
+	text-align: center;
+}
 
+.feature_box {
+	border: 3px solid #000;
+	border-radius: 20px;
+	padding: 4rem;
+	position: relative;
+	margin-bottom: 5rem;
+	background: #faf9f9;
+	position: relative;
+}
 
-	.feature_ttl {
-		text-align: center;
-	}
+.feature_ttl {
+	text-align: center;
+	font-size: 1.8vw;
+	position: absolute;
+	top: -50px;
+	background-color: #FAF9F9;
+	font-weight: 600;
+	width: 70%;
+	text-align: center;
+	margin: 0 10%;
+	padding: 1% 4.5%;
+	line-height: 1.8em;
+	border-radius: 40%;
+}
+/* だけじゃないの上に点をつける https://bityl.co/5DwZ */
+
+.feature_ttl span {
+	-webkit-text-emphasis: dot #000;
+	text-emphasis: dot #000;
+}
+
+.feature_contents_wrap {
+	display: flex;
+	width: 70vw;
+	margin: 2rem auto 0 auto;
+}
+
+.circle_wrap img {
+	width: 30vw;
+}
+
 /* ===== START 共通message START ===== */
+
 .message_area p {
 	text-align: center;
 	line-height: 2em;
@@ -165,99 +243,97 @@ main {
 }
 
 /* 問い合わせボタンb */
+
 .contact_btn_02 {
 	text-align: center;
-} 
-
-.btn,
-a.btn,
-button.btn {
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.5;/* ボタンの高さ */
-  position: relative;
-  display: inline-block;
-  padding: 1rem 4rem;/* 数字をいじってもドコモ変わらないなぜ */
-  cursor: pointer;
-  -webkit-user-select: none;/* テキストを選択できなくする */
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #212529;
-  border-radius: 0.5rem;
-  margin: 0 auto;
-
 }
 
-
+.btn, a.btn, button.btn {
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.5;
+	/* ボタンの高さ */
+	position: relative;
+	display: inline-block;
+	padding: 1rem 4rem;
+	/* 数字をいじってもドコモ変わらないなぜ */
+	cursor: pointer;
+	-webkit-user-select: none;
+	/* テキストを選択できなくする */
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	letter-spacing: 0.1em;
+	color: #212529;
+	border-radius: 0.5rem;
+	margin: 0 auto;
+}
 
 /* 問い合わせボタンの横幅を決める */
+
 a.btn-border-shadow {
-	padding: calc(1.5rem - 12px) 6vw 1.5rem; 
+	padding: calc(1.5rem - 12px) 6vw 1.5rem;
 	/* テキスト上の高さ、横、テキストの下の高さ */
 	background: pink;
-  }
-  
-  a.btn-border-shadow:before {
+}
+
+a.btn-border-shadow:before {
 	/* ここで黒枠を絶対値より左上にずらす */
 	position: absolute;
 	top: -6px;
 	left: -6px;
-  
 	width: 100%;
 	height: 100%;
-  
 	content: "";
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
-  
 	border: 3px solid #000;
 	border-radius: 0.5rem;
-  }
-  
-  a.btn-border-shadow:hover {
-	  /* クリックされたときの横幅など */
+}
+
+a.btn-border-shadow:hover {
+	/* クリックされたときの横幅など */
 	padding: calc(1.5rem - 6px) 5vw;
-  }
-  
-  a.btn-border-shadow:hover:before {
+}
+
+a.btn-border-shadow:hover:before {
 	top: 0;
 	left: 0;
-  }
-  
-  /* ボタンの色を決める */
-  a.btn-border-shadow--color {
+}
+
+/* ボタンの色を決める */
+
+a.btn-border-shadow--color {
 	border-radius: 0;
 	background: #F55937;
-  }
-  
-  a.btn-border-shadow--color:before {
+}
+
+a.btn-border-shadow--color:before {
 	border-radius: 0;
-  }
-  
-  a.btn i.fa {
-	  margin-right: 0.5rem;
-	}
-  
-  .btn-copy {
-	  margin-bottom: 1em;
-  }
-  
-  /* 問い合わせボタン終わり */
+}
+
+a.btn i.fa {
+	margin-right: 0.5rem;
+}
+
+.btn-copy {
+	margin-bottom: 1em;
+}
+
+/* 問い合わせボタン終わり */
+
 /* ===== END 共通message END ===== */
 
 /* 共通flowセクション */
+
 .flow_contents_wrap {
 	margin: 0 auto;
-	width: 80vw;
 }
-
 
 .flow_items_ttl {
 	font-weight: 700;
@@ -268,336 +344,445 @@ a.btn-border-shadow {
 	font-size: 13px;
 	font-weight: 300;
 	display: block;
-    letter-spacing: -.03em;
-    height: 44px;
-    padding-top: 6px;
-    margin: 0 auto;
+	letter-spacing: -.03em;
+	height: 44px;
+	padding-top: 6px;
+	margin: 0 auto;
 }
+
 /* ===== END 共通flow END ===== */
+
 /* ===== START 共通FAQセクション START ===== */
 
-    /* 全体の実装はここ */
-    
-    .cp_actab {
-        position: relative;
-        overflow: hidden;
-        width: 60vw;
-        color: black;
-        /* (QもAも含む)テキスト全ての色。黒の場合は指定しなくてもok */
-        /* text-align: center;Q&Aのテキストを左右中央に配置 */
-        margin: 0 auto 1.4em auto;
-        /* Q&Aのコンテンツをサイト内の左右中央に配置 */
-    }
-    /* チェックボックスを消去する */
-    
-    .cp_actab input {
-        position: absolute;
-        /* チェックボックスを非表示にした分変な空間が生まれるのを削除 */
-        opacity: 0;
-        /* チェックボックスを非表示 */
-    }
-    /* 質問の実装 */
-    
-    .cp_actab label {
-        font-weight: bold;
-        line-height: 1.6em;
-        display: block;
-        margin: 0;
-        padding: 1em 2em 1em 2.5em;
-        cursor: pointer;
-        /* 質問テキストの上にカーソルを当てると手になる */
-        text-indent: 1em;
-        /* テキストの先頭に数値分の隙間を入れる */
-        border-bottom: 1px solid black;
-        /* テキストの下の下線 */
-        /* background: ; */
-    }
-    /* Qを表示させる。 */
-    
-    .cp_actab label::before {
-        content: 'Q　';
-        font-size: 1.5em;
-    }
-    /* 質問のhover処理実装 */
-    
-    .cp_actab label:hover {
-        transition: all 0.3s;
-        color: #557683;
-    }
-    /* 質問右の+ */
-    
-    .cp_actab label::after {
-        content: '+';
-        font-size: 1.7em;
-        font-weight: bold;
-        line-height: 2em;
-        position: absolute;
-        top: 0;
-        /* これがないと下線にくっつく形になっちゃう。縦中央寄せ */
-        right: 0;
-        /* 右寄せ */
-        width: 2em;
-        /* 右寄せから少し左に。 */
-    }
-    /* 答えの実装 */
-    
-    .cp_actab-content {
-        position: relative;
-        overflow: hidden;
-        max-height: 0;
-        /* クリックされてない時は、答えが見えないように0 */
-        padding: 0 0 0 2.5em;
-        text-indent: 4em;
-        /* テキストの先頭に数値分の隙間を入れる。質問と違ってAと一緒に綺麗にずれないので↓ */
-    }
-    /* Aの表示を実装 */
-    
-    .cp_actab-content::before {
-        content: 'A　';
-        position: absolute;
-        margin: 0.4em 0 0 -4.65em;
-        /* ↑でAが答えテキストに重なってしまった分を、-で左に戻す */
-        padding: 0;
-        font-size: 1.5em;
-    }
-    /* 答えのテキストの幅調整 */
-    
-    .cp_actab-content p {
-        margin: 1em 1em 1em 0;
-    }
-    /* 質問がクリックされた時の実装 */
-    /* クリックされたら答えが見える仕様を実装 */
-    
-    .cp_actab input:checked~.cp_actab-content {
-        max-height: 40em;
-    }
-    /* クリックされたら、テキストの色が変わる */
-    
-    .cp_actab input:checked~label {
-        color: #557683;
-    }
-    /* クリックされたら+が90°回る */
-    
-    .cp_actab input[type=checkbox]:checked+label::after {
-        -webkit-transform: rotateZ(45deg);
-        transform: rotateZ(45deg);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-    }
+/* 全体の実装はここ */
 
-/* ======== END 共通FAQセクション END ======== */
+.cp_actab {
+	position: relative;
+	overflow: hidden;
+	width: 60vw;
+	color: black;
+	/* (QもAも含む)テキスト全ての色。黒の場合は指定しなくてもok */
+	/* text-align: center;Q&Aのテキストを左右中央に配置 */
+	margin: 0 auto 1.4em auto;
+	/* Q&Aのコンテンツをサイト内の左右中央に配置 */
+}
 
-/* ===== START スマホ用実装 START ===== */
+/* チェックボックスを消去する */
+
+.cp_actab input {
+	position: absolute;
+	/* チェックボックスを非表示にした分変な空間が生まれるのを削除 */
+	opacity: 0;
+	/* チェックボックスを非表示 */
+}
+
+/* 質問の実装 */
+
+.cp_actab label {
+	font-weight: bold;
+	line-height: 1.6em;
+	display: block;
+	margin: 0;
+	padding: 1em 2em 1em 2.5em;
+	cursor: pointer;
+	/* 質問テキストの上にカーソルを当てると手になる */
+	text-indent: 1em;
+	/* テキストの先頭に数値分の隙間を入れる */
+	border-bottom: 1px solid black;
+	/* テキストの下の下線 */
+	/* background: ; */
+}
+
+/* Qを表示させる。 */
+
+.cp_actab label::before {
+	content: 'Q　';
+	font-size: 1.5em;
+}
+
+/* 質問のhover処理実装 */
+
+.cp_actab label:hover {
+	transition: all 0.3s;
+	color: #557683;
+}
+
+/* 質問右の+ */
+
+.cp_actab label::after {
+	content: '+';
+	font-size: 1.7em;
+	font-weight: bold;
+	line-height: 2em;
+	position: absolute;
+	top: 0;
+	/* これがないと下線にくっつく形になっちゃう。縦中央寄せ */
+	right: 0;
+	/* 右寄せ */
+	width: 2em;
+	/* 右寄せから少し左に。 */
+}
+
+/* 答えの実装 */
+
+.cp_actab-content {
+	position: relative;
+	overflow: hidden;
+	max-height: 0;
+	/* クリックされてない時は、答えが見えないように0 */
+	padding: 0 0 0 2.5em;
+	text-indent: 4em;
+	/* テキストの先頭に数値分の隙間を入れる。質問と違ってAと一緒に綺麗にずれないので↓ */
+}
+
+/* Aの表示を実装 */
+
+.cp_actab-content::before {
+	content: 'A　';
+	position: absolute;
+	margin: 0.4em 0 0 -4.65em;
+	/* ↑でAが答えテキストに重なってしまった分を、-で左に戻す */
+	padding: 0;
+	font-size: 1.5em;
+}
+
+/* 答えのテキストの幅調整 */
+
+.cp_actab-content p {
+	margin: 1em 1em 1em 0;
+}
+
+/* 質問がクリックされた時の実装 */
+
+/* クリックされたら答えが見える仕様を実装 */
+
+.cp_actab input:checked~.cp_actab-content {
+	max-height: 40em;
+}
+
+/* クリックされたら、テキストの色が変わる */
+
+.cp_actab input:checked~label {
+	color: #557683;
+}
+
+/* クリックされたら+が90°回る */
+
+.cp_actab input[type=checkbox]:checked+label::after {
+	-webkit-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+/* ======== 共通footerセクション ======== */
+
+.footer_area {
+	background: #464036;
+	padding: 110px 5vw 10px;
+	clear: both;
+	width: 100%;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+}
+
+/* ===== START phone用実装 START ===== */
+
 @media (max-width: 520px) {
 	html, body {
-		font-size: 70%;
+		font-size: 80%;
+	
+	}
+	.section_ttl {
+		font-size: 1.5rem;
+		margin: 3.5em 0 2em 0;
 	}
 	.header {
 		height: 50px;
 	}
+	/* phonehero */
+	.hero_img img {
+		display: block;
+		margin-top: 3em;
+	}
 
-}
-/* ===== END スマホ用実装 END ===== */
+	/* phonefeature */
+	.feature_wrap {
+		margin-top: -10rem;
+		/* featureエリアを上へ調節 */
+	}
 
-/* ===== START iPad用実装 START ===== */
-@media (max-width: 959px) {
-			/* ハンバーガーボタン */
-			.nav_area {
-				position: fixed;
-				top: 0;
-				left: 100%;
-				width: 50%;
-				height: 100vh;
-				background: rgba(83, 82, 82, 0.9);
-				color: #ffffff;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				/* 右からスライド */
-				transition: left 0.5s;
-			  }
-			  .nav_area ul{
-				list-style:none;
-			  }
-			  .nav_area li:not(:last-child){
-				margin-bottom: 30px;
-			  }
-			  .nav_area a{
-				color: #ffffff;
-			  }
-			
-			/* ナビゲーションボタン（開く） */
-			#navbtn{
-			  position: fixed;
-			  top: 15px;
-			  right: 15px;
-			  padding: 0;
-			  outline: none;
-			  border: none;
-			  background: none;
-			  width: 30px;
-			  height: 20px;
-			  cursor: pointer;
-			}
-			
-			#navbtn::before,
-			#navbtn::after{
-			  content : '';
-			  display: block;
-			  height: 1px;
-			  background-color: grey;
-			  transform: translateY(10px);
-			  transition: 0.3s ease-in-out;
-			}
-			
-			#navbtn::before{
-			  transform: translateY(-10px);
-			  box-shadow: 0 10px grey;
-			}
-			
-			/* ナビゲーションボタン（閉じる） */
-			.open #navbtn{
-			  z-index: 100;
-			}
-			.open #navbtn::before{
-			  transform: rotate(-45deg);
-			  box-shadow: none;
-			}
-			.open #navbtn::after{
-			  transform: rotate(45deg);
-			  box-shadow: none;
-			}
-			/* ナビゲーションメニュー 開いた時*/
-			.open .nav_area{
-			  right: 0;
-			}
-			
-	
-	.flow_items {
+	.feature_contents_wrap {
 		display: flex;
 	}
-	/* flowセクションの文章改行をなくす */
-	.br-spc {
-		display: none;
+
+	.feature_ttl {
+		font-size: 1rem;
+		padding: 0;
+		margin: 5%;
 	}
+	/* phoneflow */
+	.flow_contents_wrap {
+		width: 90vw;
+	}
+	.flow_items {
+		margin-bottom: 2em;
+	}
+	.flow_items figure {
+		margin: 0;
+		margin-top: 1.5em;
+	}
+	.flow_items img {
+		width: 10vw;
+	}
+	.flow_text {
+		margin-left: 4em;
+	}
+	.flow_items_ttl {
+		font-size: 14px;
+	}
+	.flow_items_description {
+		font-size: 11.5px;
+	}
+	/* phonefaq */
+	.cp_actab {
+		width: 95vw;
+	}
+}
+
+/* ===== END phone用実装 END ===== */
+
+/* ===== START iPad用実装 START ===== */
+
+@media (max-width: 999px) {
+	main {
+		background-size: 20%;
+	}
+	/* ハンバーガーボタン */
+	.nav_area {
+		position: fixed;
+		top: 0;
+		left: 100%;
+		width: 50%;
+		height: 100vh;
+		background: rgba(83, 82, 82, 0.9);
+		color: #ffffff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* 右からスライド */
+		transition: left 0.5s;
+	}
+	.nav_area ul {
+		list-style: none;
+	}
+	.nav_area li:not(:last-child) {
+		margin-bottom: 30px;
+	}
+	.nav_area a {
+		color: #ffffff;
+	}
+	/* ナビゲーションボタン（開く） */
+	#navbtn {
+		position: fixed;
+		top: 15px;
+		right: 15px;
+		padding: 0;
+		outline: none;
+		border: none;
+		background: none;
+		width: 30px;
+		height: 20px;
+		cursor: pointer;
+	}
+	#navbtn::before, #navbtn::after {
+		content: '';
+		display: block;
+		height: 1px;
+		background-color: grey;
+		transform: translateY(10px);
+		transition: 0.3s ease-in-out;
+	}
+	#navbtn::before {
+		transform: translateY(-10px);
+		box-shadow: 0 10px grey;
+	}
+	/* ナビゲーションボタン（閉じる） */
+	.open #navbtn {
+		z-index: 100;
+	}
+	.open #navbtn::before {
+		transform: rotate(-45deg);
+		box-shadow: none;
+	}
+	.open #navbtn::after {
+		transform: rotate(45deg);
+		box-shadow: none;
+	}
+	/* ナビゲーションメニュー 開いた時*/
+	.open .nav_area {
+		right: 0;
+	}
+	/* ipadhero */
+	.hero_area {
+		margin: 120px auto 30px;
+		height: calc(90vh - 157px);
+	}
+
+	.hero_copy {
+		padding-top: 5vw;
+		padding-left: 3%;
+		font-size: 1.2em;
+		letter-spacing: 8px;
+		line-height: 2.3;
+		font-weight: 800;
+		/* margin-left: 20%; */
+	}
+
+.hero_phrase {
+	display: none;
+}
+
+.hero_wrap {
+	margin: 0 auto;
+}
+
+.hero_img img {
+	margin-top: 3em;
+	width: 100%;
+	min-width: 300px;
+	padding-right: 5%;
+}
+
+/* ipadfeature */
+
+.feature_contents_wrap {
+	display: flex;
+}
+
+.feature_wrap {
+	margin-top: -5rem;
+	/* featureエリアを上へ調節 */
+}
+
+.feature_ttl {
+	font-size: 1rem;
+	padding: 0;
+	margin: 5%;
+}
+.circle_wrap img {
+	width: 40vw;
+}
+
+/* iPadflow */
+
+.flow_contents_wrap {
+	width: 60vw;
+}
+
+.flow_items {
+	display: flex;
+}
+
+.flow_text {
+	padding-top: 1.5em;
+}
+
+/* flowセクションの文章改行をなくす */
+
+.br-spc {
+	display: none;
+}
+
+/* ipadfaq */
+
+.cp_actab {
+	width: 85vw;
+}
+
+.faq_area {
+	font-size: 90%;
+}
+
 }
 
 /* ===== END iPad用実装 END ===== */
 
 /* ===== START PC用実装 */
-@media (min-width: 960px) {
 
+@media (min-width: 1000px) {
 	ul {
-		display: flex;/* リストを上下中央寄せ */
-	  }
-
+		display: flex;
+		/* リストを上下中央寄せ */
+	}
 	.header {
 		height: 70px;
 	}
-
-  		/* PCではボタン非表示 */
-		  #navbtn{
-			display:none;
-		  }
-
-		  .contact_btn {
-			line-height: 40px;/* 行の高さを指定。そのままだと真ん中になってるので、アイコンの間をあけてあげる感じ */
-			font-weight: 500;
-			padding: 34px 1em 0;
-			background: #557683 url(img/icon/icon_mail_white.svg) 50% 32%/29px 29px no-repeat;
-			color: #fff;
-		}
-
-		.contact_btn a {
-			color: white;/* 色変更｜コンタクトの文字を白に */
-		}
+	/* PCではボタン非表示 */
+	#navbtn {
+		display: none;
+	}
+	.contact_btn {
+		line-height: 40px;
+		/* 行の高さを指定。そのままだと真ん中になってるので、アイコンの間をあけてあげる感じ */
+		font-weight: 500;
+		padding: 34px 1em 0;
+		background: #557683 url(img/icon/icon_mail_white.svg) 50% 32%/29px 29px no-repeat;
+		color: #fff;
+	}
+	.contact_btn a {
+		color: white;
+		/* 色変更｜コンタクトの文字を白に */
+	}
 	/* pcheroエリア */
 	.hero_area {
 		margin-top: 120px;
 		height: calc(90vh - 157px);
 		margin-bottom: 30px;
 	}
-
-	.hero_img {
-		top: 2vh;
-		width: 30vw;
-	}
-
-	.hero_img img {
-		width: 88%;
-		min-width: 30vh;
-	}
-
 	.hero_copy {
 		letter-spacing: 10px;
 		line-height: 2.8;
 		font-size: 22px;
 		font-weight: 800;
-		margin-left: 20%;
+		/* margin-left: 20%; */
 	}
-		
-		/* ガシッ */
-		.hero_copy span {
-			font-size: 1.5rem;
-		}
-
+	/* ガシッ */
+	.hero_copy span {
+		font-size: 1.5rem;
+	}
 	.hero_phrase {
 		letter-spacing: 6px;
 		font-size: 30px;
 		position: relative;
 		right: 40px;
 	}
-
-
-
-  .section_ttl {
-	font-size: 1.5rem;
-	font-weight: 700;
-  }
-
-/* pcfeatureセクション */
-.feature_wrap {
-	min-width: inherit;
-	width: 90vw;
-	margin: 0 auto;
-}
-
-.feature_box {
-	border: 3px solid #000;
-    border-radius: 20px;
-    padding-top: 4rem;
-    position: relative;
-    margin-bottom: 5rem;
-	background: #faf9f9;
-	position: relative;
-}
-
-.feature_ttl {
-	font-size: 1.6rem;
-	position: absolute;
-	top: -50px;
-	background-color: #FAF9F9;
-	font-weight: 500;
-	margin: auto 20%;
-	text-align: center;
-	padding: 1% 4.5%;
-	line-height: 1.8em;
-	border-radius: 70%;
-}
-	/* だけじゃないの上に点をつける https://bityl.co/5DwZ */
-	.feature_ttl span {
-		-webkit-text-emphasis: dot #000;
-		text-emphasis: dot #000;
+	.section_ttl {
+		font-size: 1.5rem;
+		font-weight: 700;
 	}
-
-
+	/* pcfeatureセクション */
+	/* .feature_ttl {
+		font-size: 1.6rem;
+		position: absolute;
+		top: -50px;
+		background-color: #FAF9F9;
+		font-weight: 500;
+		margin: auto 20%;
+		text-align: center;
+		padding: 1% 4.5%;
+		line-height: 1.8em;
+		border-radius: 70%;
+	} */
+	.circle_wrap img {
+		width: 28vw;
+	}
 	/* div2 ポイント吹き出しエリア */
-
 	.message_wrapper {
 		margin: 10px;
 		padding: 10px;
 	}
-
 	.people_pic {
 		background: url(img/img/div2_3x.png) no-repeat center / cover;
 		height: 10vw;
@@ -605,96 +790,34 @@ a.btn-border-shadow {
 		display: block;
 		position: absolute;
 		bottom: 0;
-		left: 20vw;
+		right: 8vw;
 	}
-
-	.bubble {
-		position: relative;
-		display: inline-block;
-		margin: 1.5em 0 1.5em 27em;/* 吹き出しの位置はここで調節 */
-		padding: 7px 2vw;
-		min-width: 120px;
-		max-width: 100%;
-		color: #555;
+	/* ======== END pcfeatureセクション END ======== */
+	/* ======== END messageセクション END ======== */
+	/* ======== START pcflowセクション START ======== */
+	.flow_contents_wrap {
+		width: 80vw;
+		text-align: center;
+	}
+	.flow_items {
+		margin: 0 auto;
+	}
+	.flow_items_ttl {
 		font-size: 16px;
-		background: #FAF9F9;
-		border: solid 1px #555;
-		box-sizing: border-box;
-		border-radius: 10px;
-	  }
+		font-weight: 700;
+		letter-spacing: 0.5;
+	}
+	.flow_items_description {
+		font-size: 13px;
+		font-weight: 300;
+		display: block;
+		max-width: 165px;
+		letter-spacing: -.03em;
+		height: 44px;
+		padding-top: 6px;
+		margin: 0 auto;
+	}
+	/* ======== END pcflowセクション END ======== */
+	/* ====== END main END ======== */
 
-	  
-	  /*  afterの三角の上に、三角を重ねる */
-	  .bubble:before {
-		content: "";
-		position: absolute;
-		top: 35%;/* .bubbleで作った四角の縦軸、上から35%の位置に三角を配置。値が大きくなればその分下にいく */
-		left: -37px;
-		/* margin-top: 12px; */
-		border: 10px solid transparent;/* ここtransparentから#000とかに色づけすると、なんで三角作れるのかわかるよ */
-		border-right: 30px solid #FAF9F9;
-		z-index: 2;
-	  }
-	  
-	  /* afterで枠になる、ベースの三角を作る */
-	  .bubble:after {
-		content: "";
-		position: absolute;
-		top: 35%;
-		left: -40px;/* left0だと、三角形の地になってる四角の一番左が、文字枠の四角につく感じに。-でそれよりも左に行ってくれるよ */
-		/* left: -20px; */
-		/* margin-top: 0; -だから上に上がる */
-		border: 10px solid transparent;/* これは三角形の横幅を伸ばす。値が小さいほど鋭くなる */
-		border-right: 30px solid #000;/* これは三角形の横軸を伸ばす。 */
-		z-index: 1;
-	  }
-	  
-/* ======== END pcfeatureセクション END ======== */
-
-
-
-/* ======== END messageセクション END ======== */
-
-
-/* ======== START pcflowセクション START ======== */
-.flow_contents_wrap {
-	text-align: center;
 }
-
-.flow_items {
-	margin: 0 auto;
-}
-
-.flow_items_ttl {
-	font-size: 16px;
-	font-weight: 700;
-	letter-spacing: 0.5;
-}
-
-.flow_items_description {
-	font-size: 13px;
-	font-weight: 300;
-	display: block;
-    max-width: 165px;
-    letter-spacing: -.03em;
-    height: 44px;
-    padding-top: 6px;
-    margin: 0 auto;
-}
-/* ======== END pcflowセクション END ======== */
-
-
-
-/* ====== END main END ======== */
-
-.footer_area {
-	background: #464036;
-    padding: 110px 5vw 10px;
-    clear: both;
-    width: 100%;
-    overflow: hidden;
-	color: #fff;
-	text-align: center;
-}
-}
-
